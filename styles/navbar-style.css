@@ -4,11 +4,14 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--nav-bg-color);
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
   transition: var(--color-transition);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  font-family: "Audiowide", sans-serif;
 }
 
 .nav-logo a {
@@ -115,7 +118,6 @@ body.dark-mode .theme-toggle .icon-moon {
   background-color: var(--text-color);
   transition: all 0.3s ease-in-out;
 }
-
 
 @media (max-width: 480px) {
   .hamburger {
