@@ -1,0 +1,163 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bg-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--color-transition);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: var(--hover-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Minimalistic underline effect on hover */
+.nav-links a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* 3. THEME TOGGLE BUTTON */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem; /* Makes icons a good size */
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.25rem;
+  /* Fix for weird list item bullet */
+  list-style: none;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  color: var(--hover-color);
+}
+
+/* Show moon by default (in light mode) */
+.theme-toggle .icon-sun {
+  display: none;
+}
+.theme-toggle .icon-moon {
+  display: block;
+}
+
+/* Show sun in dark mode */
+body.dark-mode .theme-toggle .icon-sun {
+  display: block;
+}
+body.dark-mode .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* 4. HAMBURGER MENU (MOBILE) */
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  z-index: 1001; /* Above nav links */
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: var(--nav-bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    border-left: 1px solid var(--border-color);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.25rem;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
