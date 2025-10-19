@@ -73,3 +73,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const heroContent = document.querySelector(".hero-content-2");
+//   const text = heroContent.textContent.trim();
+//   const cursor = document.createElement("span");
+//   cursor.className = "typing-cursor";
+
+//   // Settings
+//   const typingSpeed = 100; // ms
+//   const deletingSpeed = 60; // ms
+//   const pauseAfterTyping = 2000; // ms
+//   const pauseAfterDeleting = 500; // ms
+
+//   // Setup
+//   heroContent.setAttribute("data-typing", "true");
+//   heroContent.textContent = ""; // Clear original text
+//   heroContent.appendChild(cursor);
+//   heroContent.style.visibility = "visible";
+
+//   let i = 0;
+//   let isDeleting = false;
+
+//   function loop() {
+//     // Put cursor at the end of the text
+//     heroContent.appendChild(cursor);
+
+//     if (isDeleting) {
+//       // --- Deleting ---
+//       if (i > 0) {
+//         heroContent.textContent = text.substring(0, i - 1);
+//         i--;
+//         setTimeout(loop, deletingSpeed);
+//       } else {
+//         // Finished deleting
+//         isDeleting = false;
+//         setTimeout(loop, pauseAfterDeleting);
+//       }
+//     } else {
+//       // --- Typing ---
+//       if (i < text.length) {
+//         heroContent.textContent = text.substring(0, i + 1);
+//         i++;
+//         setTimeout(loop, typingSpeed);
+//       } else {
+//         // Finished typing
+//         isDeleting = true;
+//         setTimeout(loop, pauseAfterTyping);
+//       }
+//     }
+//   }
+
+//   // Start the loop
+//   loop();
+// });
