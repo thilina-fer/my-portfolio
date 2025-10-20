@@ -1,0 +1,55 @@
+.outer-div-footer {
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem; /* Added padding for spacing */
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+.inner-dev-1 {
+  color: rgb(89, 0, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  gap: 30px;
+  text-align: center; /* Ensures text is centered */
+}
+
+.inner-dev-2 {
+  /* Add styles here if needed */
+}
+
+.my-name {
+  font-size: clamp(2.5rem, 8vw, 6.25rem);
+  color: rgb(89, 0, 255);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .outer-div-footer {
+    height: auto; /* Let content define the height */
+    padding: 3rem 1rem; /* Adjust padding for tablets */
+  }
+
+  .inner-dev-1 {
+    gap: 25px; /* Slightly reduce the gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .outer-div-footer {
+    padding: 2.5rem 1rem; /* Adjust padding for phones */
+  }
+
+  .inner-dev-1 {
+    gap: 20px; /* Reduce gap for mobile */
+  }
+
+  /* The .my-name font size is already responsive with clamp() */
+}
