@@ -159,19 +159,15 @@
   flex-direction: column;
 }
 
-/* ---------- Responsiveness ---------- */
-
-/* Tablets & Small Laptops */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .card-div {
     flex-wrap: wrap;
   }
-}
+} */
 
-/* Large Mobiles & Small Tablets */
 @media (max-width: 720px) {
   .project-card {
-    max-width: 90%;
+    max-width: 70%;
   }
 
   .project-description {
@@ -179,7 +175,6 @@
   }
 }
 
-/* Small Mobile Devices */
 @media (max-width: 480px) {
   .project-section {
     padding: 40px 10px;
