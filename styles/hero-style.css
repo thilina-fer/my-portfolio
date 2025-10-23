@@ -147,7 +147,7 @@
   background-color: #ff0000;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1080px) {
   .outer-div {
     flex-direction: column;
     justify-content: center;
