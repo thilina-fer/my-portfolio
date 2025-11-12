@@ -48,8 +48,12 @@
   font-size: clamp(1.5rem, 8vw, 3rem);
 }
 
+.hero-content-2-div {
+  height: 100px;
+}
+
 .hero-content-2:hover {
-  color: #0e9594;
+  color: rgb(89, 0, 255);
 }
 
 @keyframes pop-in {

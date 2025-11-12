@@ -4,6 +4,7 @@
   --text-color: #333333;
   --hover-color: #aa00ff;
   --color-transition: background-color 0.3s ease, color 0.3s ease;
+  --card-color: #dee2e6;
 }
 
 body.dark-mode {
@@ -11,6 +12,7 @@ body.dark-mode {
   --nav-bg-color: #000000;
   --text-color: #575252;
   --hover-color: #3498db;
+  --card-color: rgb(116, 113, 113);
 }
 
 * {

@@ -39,7 +39,7 @@
 .contact-form-div {
   flex-basis: 45%;
   padding: 2rem;
-  background: #2a2a2a;
+  background: var(--card-color);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -47,14 +47,14 @@
 .contact-info h3,
 .contact-form-div h3 {
   font-size: 1.8rem;
-  color: #fff;
+  color: rgb(89, 0, 255);
   margin-bottom: 1.5rem;
 }
 
 .contact-info p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #ccc;
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -78,7 +78,7 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #eee;
+  color: #000000;
   margin-bottom: 0.5rem;
 }
 
@@ -88,8 +88,8 @@
   padding: 0.75rem 1rem;
   font-size: 1rem;
   color: #fff;
-  background: #333;
-  border: 1px solid #555;
+  background: #adb5bd;
+  border: 1px solid #dee2e6;
   border-radius: 5px;
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;

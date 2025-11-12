@@ -41,7 +41,7 @@
 }
 
 .content-box {
-  background: #333333;
+  background: var(--card-color);
   transition: all 0.5s ease-in-out;
   padding: 60px 25px 25px 25px;
   transform-style: preserve-3d;

@@ -1,55 +1,125 @@
-.outer-div-footer {
-  width: 100%;
-  height: 300px;
-  background-color: #333;
+.content-wrapper {
+  flex: 1;
+  padding: 20px;
+}
+
+/* --- Modern Footer Styles --- */
+
+.site-footer {
+  /* background-color: var(--footer-bg); */
+  /* color: var(--footer-text); */
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 2rem; /* Added padding for spacing */
-  box-sizing: border-box; /* Ensures padding doesn't add to width */
+  gap: 25px;
 }
 
-.inner-dev-1 {
-  color: rgb(89, 0, 255);
+.footer-top {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: fit-content;
-  gap: 30px;
-  text-align: center; /* Ensures text is centered */
+  flex-wrap: wrap; /* Wraps items on smaller screens */
+  gap: 20px;
 }
 
-.inner-dev-2 {
-  /* Add styles here if needed */
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* color: var(--footer-link-hover); */
+  text-decoration: none;
 }
 
-.my-name {
-  font-size: clamp(2.5rem, 8vw, 6.25rem);
-  color: rgb(89, 0, 255);
-  text-transform: uppercase;
+.footer-social-links {
+  display: flex;
+  gap: 15px;
 }
 
+.footer-social-links a {
+  /* color: var(--footer-text); */
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjust icon size if using icon fonts */
+  transition: color 0.3s ease;
+}
+
+/* Example: Using text for links, but you can swap these for icons */
+.footer-social-links a::before {
+  content: attr(data-platform); /* Shows the platform name */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(67, 64, 64);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-copyright {
+  text-align: center;
+  flex-grow: 1; /* Allows it to center when wrapped */
+}
+
+.footer-back-to-top {
+  /* color: var(--footer-text); */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+/* --- Responsive Adjustments --- */
+
+/* For tablets (e.g., iPad portrait) and smaller */
 @media (max-width: 768px) {
-  .outer-div-footer {
-    height: auto; /* Let content define the height */
-    padding: 3rem 1rem; /* Adjust padding for tablets */
+  .footer-top,
+  .footer-bottom {
+    /* Stack the sections vertically */
+    flex-direction: column;
+    text-align: center;
   }
 
-  .inner-dev-1 {
-    gap: 25px; /* Slightly reduce the gap */
+  /* Ensure social links are centered when stacked */
+  .footer-social-links {
+    justify-content: center;
+  }
+
+  /* Add a bit more space between stacked top/bottom items */
+  .footer-top {
+    gap: 25px;
+  }
+
+  .footer-bottom {
+    gap: 20px;
   }
 }
 
+/* For small mobile phones */
 @media (max-width: 480px) {
-  .outer-div-footer {
-    padding: 2.5rem 1rem; /* Adjust padding for phones */
+  .site-footer {
+    /* Reduce padding on very small screens */
+    padding: 30px 15px;
   }
 
-  .inner-dev-1 {
-    gap: 20px; /* Reduce gap for mobile */
+  .footer-logo {
+    /* Make the logo slightly smaller */
+    font-size: 1.3rem;
   }
 
-  /* The .my-name font size is already responsive with clamp() */
+  .footer-bottom {
+    /* Reduce the top padding for the copyright */
+    padding-top: 20px;
+  }
+
+  .footer-copyright {
+    /* Make copyright text slightly smaller */
+    font-size: 13px;
+  }
 }
