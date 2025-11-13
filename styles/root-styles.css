@@ -2,16 +2,21 @@
   --bg-color: #ffffff;
   --nav-bg-color: #f8f8f8;
   --text-color: #333333;
-  --hover-color: #aa00ff;
+  --hover-color: #0000d0;
   --color-transition: background-color 0.3s ease, color 0.3s ease;
   --card-color: #dee2e6;
+  --card-bg: #112240;
+  --text-light: #ccd6f6;
+  --text-medium: #8892b0;
+  --accent-primary: #64ffda;
+  --shadow-color: rgba(2, 12, 27, 0.7);
 }
 
 body.dark-mode {
   --bg-color: #000000;
   --nav-bg-color: #000000;
   --text-color: #575252;
-  --hover-color: #3498db;
+  --hover-color: #3c34db;
   --card-color: rgb(116, 113, 113);
 }
 

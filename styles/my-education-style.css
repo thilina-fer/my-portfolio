@@ -1,0 +1,189 @@
+/* ===== TIMELINE FIXED & MODERN ===== */
+.about-section {
+  margin-bottom: 300px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: var(--card-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  transition: var(--color-transition);
+  z-index: 0;
+}
+
+/* ITEM CONTAINERS */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dots */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-color);
+  border: 4px solid var(--hover-color);
+  border-radius: 50%;
+  z-index: 2;
+  transition: var(--color-transition);
+}
+
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+/* CONTENT CARD */
+.content {
+  /* background-color: var(--card-bg); */
+  background-color: transparent;
+  
+  /* MODIFIED: Replaced hard-coded color with variable */
+  border: 2px solid var(--hover-color);
+  
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: var(--color-transition);
+  position: relative;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.content .year {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.content:hover {
+  background-color: var(--hover-color);
+  
+  /* MODIFIED: Replaced hard-coded #fff with variable */
+  color: var(--bg-color);
+  
+  transform: translateY(-4px);
+}
+
+/* ===== FIXED RESPONSIVENESS ===== */
+
+/* ≤1024px */
+@media (max-width: 1024px) {
+  .timeline {
+    max-width: 90%;
+  }
+  .content {
+    padding: 20px 25px;
+  }
+}
+
+/* ≤720px (tablet) */
+@media (max-width: 720px) {
+  .timeline::after {
+    left: 25px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 15px;
+  }
+
+  .content {
+    border-radius: 12px;
+  }
+}
+
+/* ≤480px (mobile) */
+@media (max-width: 480px) {
+  .timeline {
+    padding: 10px 0;
+  }
+
+  .timeline::after {
+    left: 15px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    padding: 15px 18px;
+  }
+
+  .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .content h4 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
